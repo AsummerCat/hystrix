@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Hystrix-Turbine
+server:
+  port: 9091
+
+# 自定义管理服务器地址
+management:
+  port: 9092
+  address: 127.0.0.1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+turbine:
+#参数指定了需要收集监控信息的服务名
+  app-config: Hystrix-Consumer
+  cluster-name-expression: new String('default')
+  combine-host-port: true

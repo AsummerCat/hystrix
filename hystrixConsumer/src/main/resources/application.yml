@@ -1,8 +1,8 @@
 spring:
   application:
-    name: eureka-client
+    name: Hystrix-Consumer
 server:
-  port: 8084
+  port: 8085
 
 management:
   security:
